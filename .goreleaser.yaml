@@ -1,6 +1,7 @@
 project_name: temporal-distribution
 builds:
-  - env: [CGO_ENABLED=0]
+  - binary: temporal-server
+    env: [CGO_ENABLED=0]
     goos:
       - linux
     goarch:
