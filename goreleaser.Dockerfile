@@ -1,7 +1,13 @@
-FROM alpine:3.16.2
+FROM temporalio/base-server:1.10.0
 
-COPY temporal-server /temporal/temporal-server
+WORKDIR /home/temporal
 
-WORKDIR /temporal
+ENV TEMPORAL_HOME /home/temporal
 
-CMD ["/temporal/temporal-server"]
+RUN addgroup -g 1000 temporal
+RUN adduser -u 1000 -G temporal -D temporal
+USER temporal
+
+COPY temporal-server /home/temporal/temporal-server
+
+CMD ["/home/temporal/temporal-server"]
