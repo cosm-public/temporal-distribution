@@ -4,9 +4,12 @@ builds:
     env: [CGO_ENABLED=0]
     goos:
       - linux
+      - darwin
     goarch:
       - amd64
       - arm64
+archives:
+  - format: binary
 dockers:
   - image_templates: ["ghcr.io/cosm-eng/{{ .ProjectName }}:{{ .Version }}-amd64"]
     dockerfile: goreleaser.Dockerfile
