@@ -101,7 +101,7 @@ func DataStoreConfig() map[string]config.DataStore {
 			User:            viper.GetString("visibility.sql.user"),
 			Password:        viper.GetString("visibility.sql.password"),
 			PluginName:      viper.GetString("visibility.sql.plugin"),
-			DatabaseName:    viper.GetString("visibility.database"),
+			DatabaseName:    viper.GetString("visibility.sql.database"),
 			ConnectAddr:     viper.GetString("visibility.sql.host") + ":" + viper.GetString("visibility.sql.port"),
 			ConnectProtocol: "tcp",
 			MaxConns:        viper.GetInt("visibility.sql.maxconns"),
