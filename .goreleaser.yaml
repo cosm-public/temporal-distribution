@@ -9,7 +9,7 @@ builds:
       - arm64
 dockers:
   - image_templates: ["ghcr.io/cosm-eng/{{ .ProjectName }}:{{ .Version }}-amd64"]
-    dockerfile: Dockerfile
+    dockerfile: goreleaser.Dockerfile
     use: buildx
     build_flag_templates:
       - --platform=linux/amd64
