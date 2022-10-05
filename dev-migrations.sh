@@ -1,4 +1,9 @@
 #!/usr/bin/env zsh
+# assumes the directory structure:
+# $parent
+#   /distribution - this project
+#   /temporal - upstream
+
 temporal-sql-tool --plugin $SQL_PLUGIN --ep $SQL_HOST -u $SQL_USER --pw $SQL_PASSWORD -p $SQL_PORT --db $SQL_DATABASE setup-schema -v 0.0
 temporal-sql-tool --plugin $SQL_PLUGIN --ep $SQL_HOST -u $SQL_USER --pw $SQL_PASSWORD -p $SQL_PORT --db $SQL_DATABASE update-schema -d $PWD/../temporal/schema/postgresql/v96/temporal/versioned
 
