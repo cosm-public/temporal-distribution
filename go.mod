@@ -3,8 +3,8 @@ module github.com/cosm-eng/temporal/distribution
 go 1.19
 
 require (
-	go.temporal.io/server v1.18.5
 	github.com/spf13/viper v1.13.0
+	go.temporal.io/server v1.18.5
 )
 
 require (
@@ -26,7 +26,7 @@ require (
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
 	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
-	github.com/gocql/gocql v1.2.0 // indirect
+	github.com/gocql/gocql v1.2.1 // indirect
 	github.com/gogo/googleapis v1.4.1 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/gogo/status v1.1.1 // indirect
@@ -73,7 +73,6 @@ require (
 	github.com/spf13/cast v1.5.0 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	github.com/spf13/viper v1.13.0 // indirect
 	github.com/stretchr/objx v0.4.0 // indirect
 	github.com/stretchr/testify v1.8.0 // indirect
 	github.com/subosito/gotenv v1.4.1 // indirect
