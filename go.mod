@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/spf13/viper v1.13.0
-	go.temporal.io/server v1.19.0
+	go.temporal.io/server v1.19.1
 )
 
 require (
