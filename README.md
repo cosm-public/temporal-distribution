@@ -38,6 +38,8 @@ This tag adheres to the following conventions:
 * `$TEMPORAL_VERSION-$DISTRIBUTION_BUILD_NUMBER`, for example: `v1.18.0-0`
 * Only code changes should create a new tag. Changes to manifests do not require a rebuild of the distribution.
 
+To upgrade, update the `go.temporal.io/server` version in `go.mod` and run `go mod tidy` to refresh the lockfile. 
+Then push to main, and create a new tag like above, and push that.
 On tag, GitHub Actions will build and publish artifacts described in [.goreleaser.yaml](.goreleaser.yaml):
 * Server binaries, see [Releases](https://github.com/cosm-eng/temporal-distribution/releases)
 * Multi-arch container, see [Packages](https://github.com/orgs/cosm-eng/packages?repo_name=temporal-distribution)

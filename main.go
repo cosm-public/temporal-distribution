@@ -27,19 +27,23 @@ func main() {
 		tag.NewStringTag("server-version", headers.ServerVersion),
 	)
 
-	err := cfg.Validate()
-	if err != nil {
-		stdlog.Fatal(err)
+	verr := cfg.Validate()
+	if verr != nil {
+		stdlog.Fatal(verr)
 	}
 
-	s := temporal.NewServer(
+	s, terr := temporal.NewServer(
 		temporal.ForServices(services),
 		temporal.WithConfig(cfg),
 		temporal.WithLogger(logger),
 		temporal.InterruptOn(temporal.InterruptCh()),
 	)
-	err = s.Start()
-	if err != nil {
-		stdlog.Fatal(err)
+	if terr != nil {
+		stdlog.Fatal(terr)
+	}
+
+	serr := s.Start()
+	if serr != nil {
+		stdlog.Fatal(serr)
 	}
 }
