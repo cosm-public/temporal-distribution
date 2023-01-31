@@ -3,7 +3,7 @@ module github.com/cosm-eng/temporal/distribution
 go 1.19
 
 require (
-	go.temporal.io/server v1.18.0
+	go.temporal.io/server v1.18.5
 	github.com/spf13/viper v1.13.0
 )
 
